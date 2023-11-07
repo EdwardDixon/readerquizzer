@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reading in a new language</title>
+  <link rel="stylesheet" href="main.css">
+  <!-- Tippy.js CSS (optional for styling) -->
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js/dist/tippy.css">
+</head>
+<body>
+  <div class="container">
+    <div id="quiz" class="content">
+      <!-- The quiz content will be dynamically inserted here by your script -->
+    </div>
+  </div>
+
+  <!-- Popper.js and Tippy.js Scripts -->
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+
+  <!-- Your custom script -->
+  <script src="quizzbuilder.js"></script>
+
+  <script>
+    const quizData = {
+      "paragraph": {
+        "irish": "De réir mar a chuaigh an ghrian síos agus an fuacht tráthnóna ag teacht orainn, rinneamar ullmhúcháin le haghaidh na hoíche. Chorrasamar na málaí litreach leathair crua, agus na málaí canbháis cnóite de phriontaíocht (cnóite agus neamhchothrom mar gheall ar chríocha agus coirnéil thar na bearta, boscaí agus leabhair). Chorrasamar suas iad agus d'athraíomar iad ar bhealach a dhéanfadh ár leaba chomh cothrom agus ab fhéidir. Agus rinneamar feabhas air, cinnte, cé go raibh cuma ardaithe agus tonnta air i ndiaidh ár saothair go léir, cosúil le píosa beag de mhuir stoirmeach. Ina dhiaidh sin, bhailíomar suas ár mbuataisí ó neadacha aisteacha i measc na málaí poist inar shocraigh siad, agus chuireamar orainn iad. Ansin, thógamar anuas ár gcótaí, ár vestanna, brístí agus léinte olla tiubha ó na lúba lámh inar bhí siad ag luascadh an lá ar fad, agus chuir muid orainn iad – mar, ní raibh aon mhnaoi i láthair na huaire ag na stáisiúin nó sa chóiste, agus mar bhí an aimsir te, bhí ár gcompord á lorg againn trí sracadh dár n-éadaí fo-éadaigh, ag naoi a chlog ar maidin. Nuair a bhí gach rud réidh anois, stóráil muid an Foclóir míshuaimhneach in áit a luífeadh sé chomh ciúin agus ab fhéidir, agus chuir muid na coimeádáin uisce agus na gunnaí san áit arbh fhéidir linn teacht orthu sa dorchadas. Ansin, chaith muid píopa deiridh, agus mhalartaíomar scéal deiridh; i ndiaidh sin, chuir muid na píopaí, an t-ábhar tobac agus an mála airgid i bpoll beag cluthar agus uaimh i measc na málaí poist, agus ansin d'fhág muid sios na cuirtíní timpeall ar an gcóiste go léir, agus rinneamar an áit chomh ‘dorcha le taobh istigh na bó,’ mar a chuir an tiománaí síos air ar a bhealach ildánach. Bhí sé cinnte chomh dorcha agus a bhféadfadh aon áit a bheith – ní fhéadfaí aon rud a fheiceáil go fiú go héagánta ann. Agus sa deireadh, chasamar orainn féin mar péisteanna síoda, gach duine ina bhlaincéad féin, agus luidh muid síos go síochánta le codladh.",
+        "english": "As the sun went down and the evening chill came on, we made preparation for bed. We stirred up the hard leather letter-sacks, and the knotty canvas bags of printed matter (knotty and uneven because of projecting ends and corners of magazines, boxes and books). We stirred them up and redisposed them in such a way as to make our bed as level as possible. And we did improve it, too, though after all our work it had an upheaved and billowy look about it, like a little piece of a stormy sea. Next we hunted up our boots from odd nooks among the mail-bags where they had settled, and put them on. Then we got down our coats, vests, pantaloons and heavy woolen shirts, from the arm-loops where they had been swinging all day, and clothed ourselves in them—for, there being no ladies either at the stations or in the coach, and the weather being hot, we had looked to our comfort by stripping to our underclothing, at nine o’clock in the morning. All things being now ready, we stowed the uneasy Dictionary where it would lie as quiet as possible, and placed the water-canteens and pistols where we could find them in the dark. Then we smoked a final pipe, and swapped a final yarn; after which, we put the pipes, tobacco and bag of coin in snug holes and caves among the mail-bags, and then fastened down the coach curtains all around, and made the place as “dark as the inside of a cow,” as the conductor phrased it in his picturesque way. It was certainly as dark as any place could be—nothing was even dimly visible in it. And finally, we rolled ourselves up like silk-worms, each person in his own blanket, and sank peacefully to sleep."
+      },
+      "questions": [
+        {
+          "irish": "Cén gníomhaíocht a rinne siad chun a leaba a dhéanamh chomh cothrom agus ab fhéidir?",
+          "english": "What activity did they perform to make their bed as level as possible?",
+          "options": {
+            "A": {
+              "irish": "An líon siad na málaí le tuí?",
+              "english": "Did they fill the bags with straw?"
+            },
+            "B": {
+              "irish": "An ndearna siad na málaí poist agus na málaí canbháis a chorraí suas agus a athshuíomh?",
+              "english": "Did they stir up the mail sacks and canvas bags and reposition them?"
+            },
+            "C": {
+              "irish": "An chuir siad blaincéid bhreise leis?",
+              "english": "Did they add extra blankets?"
+            },
+            "D": {
+              "irish": "An ndearna siad tochtanna aeir a úsáid?",
+              "english": "Did they use air mattresses?"
+            }
+          },
+          "correct": "B"
+        },
+      ]
+    };
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+    generateQuizUI(quizData);
+    });
+
+  </script>
+</body>
+</html>

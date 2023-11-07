@@ -1,0 +1,96 @@
+#quiz {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  margin: auto;
+}
+
+.paragraph {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.question {
+  margin-bottom: 15px;
+}
+
+.question p {
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 5px 10px;
+  margin: 5px 0;
+  background-color: #e7e7e7;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+li:hover {
+  background-color: #dcdcdc;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; /* Or any other font you prefer */
+}
+
+.container {
+  max-width: 100%; /* This limits the width to the viewport width */
+  overflow-x: hidden; /* This prevents horizontal scrolling */
+  margin: auto;
+  padding: 20px;
+}
+
+.content {
+  /* If you have a class for the textual content, ensure it has padding and potentially a max-width */
+  padding: 0 15px; /* Adjust as needed */
+  max-width: 100%; /* You might want to set this to 95% or similar if you want some margin on the sides */
+}
+
+/* If you're using a grid or similar layout, make sure columns and rows are set to handle overflow */
+.row, .column {
+  overflow: hidden; /* This will hide the overflowing content */
+}
+
+/* For any scrolling content */
+.scrollable-content {
+  overflow-y: auto; /* Enables vertical scrolling if necessary */
+  max-height: 400px; /* Or whatever maximum height you prefer */
+}
+
+.wrong-answer {
+  color: red;
+  animation: shake 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.correct-answer {
+  color: green;
+  animation: pop 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
